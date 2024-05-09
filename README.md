@@ -13,16 +13,16 @@ then change directory
 
 Install the following Python libraries:
 
-selenium
-pytest
-pytest-html
-pytest-print
-pytest-bdd
-pytest-selenium
-pytest-selenium-auto
-allure-pytest
-pyotp
-hypothesis
+⋅⋅* selenium
+⋅⋅* pytest
+⋅⋅* pytest-html
+⋅⋅* pytest-print
+⋅⋅* pytest-bdd
+⋅⋅* pytest-selenium
+⋅⋅* pytest-selenium-auto
+⋅⋅* allure-pytest
+⋅⋅* pyotp
+⋅⋅* hypothesis
 
 `pip install -r requirements.txt`
 
