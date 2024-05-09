@@ -54,6 +54,7 @@ or
 
 `pytest --driver Chrome tests/pytest-selenium/test_otp_page.py::test_otp_page_verify_with_correct_code`
 
-###### Report Directory:
+
+**Note: You may report inside the `reports` or `allure-report` directory or logs inside the `logs` directory
 
 
