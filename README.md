@@ -1,7 +1,11 @@
 # PythonQAAutomation
 Python QA Tests Automation
 
+Requirement:
+
 First, please install Python version 3.10, you may refer to [python.org](https://www.python.org/)
+
+Second, please install [Allure Rport](https://allurereport.org/), you may refer to [Install or upgrade Allure Report](https://allurereport.org/docs/install/)
 
 Clone this repository by using the following command in your terminal or command prompt
 
