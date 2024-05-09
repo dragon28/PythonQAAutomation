@@ -40,13 +40,13 @@ Once done installing the Python libraries, we can run the Python program or scri
 
 ###### Example of Usage:
 
-For running all the pytest-selenium tests:
+For executing all the pytest-selenium tests:
 
 `python run_all_pytest-selenium_tests.py`
 
 or
 
-For running all the hypothesis tests:
+For executing all the hypothesis tests:
 
 `python run_all_hypothesis_tests.py`
 
@@ -56,13 +56,13 @@ or
 
 or
 
-For running specific test program file:
+For executing specific test program file:
 
 `pytest --driver Chrome tests/hypothesis/test_sample_form_page_using_hypothesis.py`
 
 or
 
-For running specific test function inside the program file:
+For executing specific test function inside the program file:
 
 `pytest --driver Chrome tests/pytest-selenium/test_otp_page.py::test_otp_page_verify_with_correct_code`
 
