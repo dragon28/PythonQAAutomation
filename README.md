@@ -36,9 +36,13 @@ Once done installing the Python libraries, we can run the Python program or scri
 
 ###### Example of Usage:
 
+For running all the pytest-selenium tests:
+
 `python run_all_pytest-selenium_tests.py`
 
 or
+
+For running all the hypothesis tests:
 
 `python run_all_hypothesis_tests.py`
 
@@ -48,13 +52,17 @@ or
 
 or
 
+For running specific test program file:
+
 `pytest --driver Chrome tests/hypothesis/test_sample_form_page_using_hypothesis.py`
 
 or
 
+For running specific test function inside the program file:
+
 `pytest --driver Chrome tests/pytest-selenium/test_otp_page.py::test_otp_page_verify_with_correct_code`
 
 
-**Note: You may report inside the `reports` or `allure-report` directory or logs inside the `logs` directory
+**Note: You may the test report inside the `reports` or `allure-report` directory or test logs inside the `logs` directory
 
 
