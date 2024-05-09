@@ -11,7 +11,7 @@ then change directory
 
 `cd PythonQAAutomation`
 
-Install the following Python libraries:
+###### Install the following Python libraries:
 
 * selenium
 * pytest
@@ -31,3 +31,29 @@ or
 `pip install -r frezeed_requirements.txt`
 
 **Note: For better compatibility use `pip install -r frezeed_requirements.txt`
+
+Once done installing the Python libraries, we can run the Python program or script.
+
+###### Example of Usage:
+
+`python run_all_pytest-selenium_tests.py`
+
+or
+
+`python run_all_hypothesis_tests.py`
+
+or
+
+`pytest --driver Chrome`
+
+or
+
+`pytest --driver Chrome tests/hypothesis/test_sample_form_page_using_hypothesis.py`
+
+or
+
+`pytest --driver Chrome tests/pytest-selenium/test_otp_page.py::test_otp_page_verify_with_correct_code`
+
+###### Report Directory:
+
+
