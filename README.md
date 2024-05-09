@@ -7,6 +7,10 @@ Clone this repository by the following commands in your terminal or command prom
 
 `git clone https://github.com/dragon28/PythonQAAutomation.git`
 
+then change directory
+
+`cd PythonQAAutomation`
+
 Install the following Python libraries:
 
 selenium
