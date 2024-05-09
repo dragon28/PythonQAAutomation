@@ -12,7 +12,7 @@ if __name__ == '__main__':
     single_html_report = "reports/report.html"
     allure_single_html_report  = "allure-report/index.html"
     
-    # pytest_result = subprocess.run(['python', '-m', 'pytest', '--driver', 'Chrome','tests/hypothesis/test_sample_form_page_using_hypothesis'], capture_output=True, text=True)
+    # pytest_result = subprocess.run(['python', '-m', 'pytest', '--driver', 'Chrome','tests/hypothesis/test_sample_form_page_using_hypothesis.py'], capture_output=True, text=True)
     pytest_result = subprocess.run(['python', '-m', 'pytest', '--driver', 'Chrome', 'tests/hypothesis/'], capture_output=True, text=True)
     
     if pytest_result.stdout:
