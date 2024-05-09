@@ -1,0 +1,10 @@
+selenium
+pytest
+pytest-html
+pytest-print
+pytest-bdd
+pytest-selenium
+pytest-selenium-auto
+allure-pytest
+pyotp
+hypothesis

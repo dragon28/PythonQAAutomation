@@ -1,0 +1,152 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.13, pytest-8.2.0, pluggy-1.5.0 -- /home/dragon/pythondev/PythonQAAutomation/venv/bin/python
+cachedir: .pytest_cache
+driver: Chrome
+sensitiveurl: .*
+metadata: {'Python': '3.10.13', 'Platform': 'Linux-6.1.0-21-amd64-x86_64-with-glibc2.36', 'Packages': {'pytest': '8.2.0', 'pluggy': '1.5.0'}, 'Plugins': {'selenium': '4.1.0', 'metadata': '3.1.1', 'hypothesis': '6.100.5', 'print': '1.0.0', 'bdd': '7.1.2', 'html': '4.1.1', 'allure-pytest': '2.13.5', 'variables': '3.1.0', 'selenium-auto': '1.3.1', 'base-url': '2.1.0'}, 'JAVA_HOME': '/home/dragon/.sdkman/candidates/java/current', 'Base URL': '', 'Driver': 'Chrome', 'Capabilities': {}}
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/home/dragon/pythondev/PythonQAAutomation/.hypothesis/examples'))
+rootdir: /home/dragon/pythondev/PythonQAAutomation
+configfile: pytest.ini
+plugins: selenium-4.1.0, metadata-3.1.1, hypothesis-6.100.5, print-1.0.0, bdd-7.1.2, html-4.1.1, allure-pytest-2.13.5, variables-3.1.0, selenium-auto-1.3.1, base-url-2.1.0
+collecting ... collected 12 items
+
+tests/pytest-selenium/test_otp_page.py::test_url_otp_page asserting that <Function test_url_otp_page> | at Line 121 | 'okta.com' in web_driver.current_url | 'okta.com' in 'https://dev-12122670.okta.com/oauth2/default/v1/authorize?response_type=code&client_id=0oagkutfth1CCXZ9k5d7&redirect_uri=https%3A%2F%2Fspa4h429l.otpyrc.dev%2Fauthorization-code%2Fcallback&scope=openid%20openid%20profile&state=XKG7BdRfay%2FR5RjnSPrfTtPN'
+ +  where 'https://dev-12122670.okta.com/oauth2/default/v1/authorize?response_type=code&client_id=0oagkutfth1CCXZ9k5d7&redirect_uri=https%3A%2F%2Fspa4h429l.otpyrc.dev%2Fauthorization-code%2Fcallback&scope=openid%20openid%20profile&state=XKG7BdRfay%2FR5RjnSPrfTtPN' = <selenium.webdriver.chrome.webdriver.WebDriver (session="feb0d71eb824c36a364b4f94b6ec6279")>.current_url | Pass
+
+PASSED         [  8%]
+tests/pytest-selenium/test_otp_page.py::test_otp_page_check_input_form_element asserting that <Function test_otp_page_check_input_form_element> | at Line 127 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_INPUT_ENTER_CODE_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="f25e8dbea3f40536242e2d2a397b65f2", element="f.FD4CAA3DB663E4E2CEF3727D874E607A.d.8BCA166B541CF7324C3629987A086D49.e.26")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="f25e8dbea3f40536242e2d2a397b65f2", element="f.FD4CAA3DB663E4E2CEF3727D874E607A.d.8BCA166B541CF7324C3629987A086D49.e.26")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="f25e8dbea3f40536242e2d2a397b65f2")>>('xpath', "//input[contains(@type, 'text') and contains(@name, 'credentials.passcode') and contains(@autocomplete, 'off')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="f25e8dbea3f40536242e2d2a397b65f2")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="f25e8dbea3f40536242e2d2a397b65f2")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+PASSED [ 16%]
+tests/pytest-selenium/test_otp_page.py::test_otp_page_check_header_verify_element asserting that <Function test_otp_page_check_header_verify_element> | at Line 133 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_HEADER_VERIFY_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="42a103f5b3ba6a12188a5492acc71231", element="f.C83C00A330FDCE3630EC7E186632866D.d.98023734E99BABFCEBA6A3156BD15499.e.35")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="42a103f5b3ba6a12188a5492acc71231", element="f.C83C00A330FDCE3630EC7E186632866D.d.98023734E99BABFCEBA6A3156BD15499.e.35")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="42a103f5b3ba6a12188a5492acc71231")>>('xpath', "//h2[contains(text(), 'Verify with Google Authenticator')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="42a103f5b3ba6a12188a5492acc71231")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="42a103f5b3ba6a12188a5492acc71231")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+PASSED [ 25%]
+tests/pytest-selenium/test_otp_page.py::test_otp_page_check_label_enter_code_element asserting that <Function test_otp_page_check_label_enter_code_element> | at Line 139 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_LABEL_ENTER_CODE_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="3c254dd9b5f9fa5e6bd0f30dc216c877", element="f.D0677685F536140950502544884EBE39.d.E9A961AC63F184B05F6C69D219BE7639.e.35")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="3c254dd9b5f9fa5e6bd0f30dc216c877", element="f.D0677685F536140950502544884EBE39.d.E9A961AC63F184B05F6C69D219BE7639.e.35")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="3c254dd9b5f9fa5e6bd0f30dc216c877")>>('xpath', "//label[contains(text(), 'Enter code')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="3c254dd9b5f9fa5e6bd0f30dc216c877")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="3c254dd9b5f9fa5e6bd0f30dc216c877")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+PASSED [ 33%]
+tests/pytest-selenium/test_otp_page.py::test_otp_page_check_input_enter_code_element asserting that <Function test_otp_page_check_input_enter_code_element> | at Line 144 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_INPUT_ENTER_CODE_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="eb141ab96c2b02e2c03c925b3a6d7fdb", element="f.678D3FB91E2EC046E847FB44C4042A94.d.256DA5A4F72683D9A71B4EE7745802FD.e.26")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="eb141ab96c2b02e2c03c925b3a6d7fdb", element="f.678D3FB91E2EC046E847FB44C4042A94.d.256DA5A4F72683D9A71B4EE7745802FD.e.26")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="eb141ab96c2b02e2c03c925b3a6d7fdb")>>('xpath', "//input[contains(@type, 'text') and contains(@name, 'credentials.passcode') and contains(@autocomplete, 'off')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="eb141ab96c2b02e2c03c925b3a6d7fdb")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="eb141ab96c2b02e2c03c925b3a6d7fdb")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+PASSED [ 41%]
+tests/pytest-selenium/test_otp_page.py::test_otp_page_check_button_verify_element asserting that <Function test_otp_page_check_button_verify_element> | at Line 149 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_BUTTON_VERIFY_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="893905e6bb480809dd0aa271ec959186", element="f.D516BBE41683FCA87DEFBB881F914DA5.d.14E6FC9F3AFA9B97307FBB31CB5AB263.e.35")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="893905e6bb480809dd0aa271ec959186", element="f.D516BBE41683FCA87DEFBB881F914DA5.d.14E6FC9F3AFA9B97307FBB31CB5AB263.e.35")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="893905e6bb480809dd0aa271ec959186")>>('xpath', "//input[contains(@type, 'submit') and contains(@value, 'Verify') and contains(@data-type, 'save')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="893905e6bb480809dd0aa271ec959186")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="893905e6bb480809dd0aa271ec959186")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+PASSED [ 50%]
+tests/pytest-selenium/test_otp_page.py::test_otp_page_check_span_username_element asserting that <Function test_otp_page_check_span_username_element> | at Line 155 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_SPAN_USERNAME_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="021f27dddd5ff41cabbe632132187519", element="f.73F16B5C3112625186922E7F7B24C065.d.A7960DCA88B68E9E335471BE7114D7F0.e.35")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="021f27dddd5ff41cabbe632132187519", element="f.73F16B5C3112625186922E7F7B24C065.d.A7960DCA88B68E9E335471BE7114D7F0.e.35")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="021f27dddd5ff41cabbe632132187519")>>('xpath', "//span[contains(text(), 'sengloong82@gmail.com')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="021f27dddd5ff41cabbe632132187519")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="021f27dddd5ff41cabbe632132187519")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+PASSED [ 58%]
+tests/pytest-selenium/test_otp_page.py::test_otp_page_check_link_back_to_sign_in_element asserting that <Function test_otp_page_check_link_back_to_sign_in_element> | at Line 161 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_LINK_BACK_TO_SIGN_IN_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="21e8a066126f2a92bd539dc61e13e0f4", element="f.D36F135F2C7D1F4A11F90691A9762996.d.EDCF3C45DF90B41FE4F8E9F668B8838C.e.35")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="21e8a066126f2a92bd539dc61e13e0f4", element="f.D36F135F2C7D1F4A11F90691A9762996.d.EDCF3C45DF90B41FE4F8E9F668B8838C.e.35")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="21e8a066126f2a92bd539dc61e13e0f4")>>('xpath', "//a[contains(text(), 'Back to sign in')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="21e8a066126f2a92bd539dc61e13e0f4")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="21e8a066126f2a92bd539dc61e13e0f4")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+PASSED [ 66%]
+tests/pytest-selenium/test_otp_page.py::test_validate_otp_page_suite start testing test_validate_otp_page_suite
+
+asserting that <Function test_validate_otp_page_suite> | at Line 121 | 'okta.com' in web_driver.current_url | 'okta.com' in 'https://dev-12122670.okta.com/oauth2/default/v1/authorize?response_type=code&client_id=0oagkutfth1CCXZ9k5d7&redirect_uri=https%3A%2F%2Fspa4h429l.otpyrc.dev%2Fauthorization-code%2Fcallback&scope=openid%20openid%20profile&state=UUsIclqQu6xw8uza%2F4rfDAfQ'
+ +  where 'https://dev-12122670.okta.com/oauth2/default/v1/authorize?response_type=code&client_id=0oagkutfth1CCXZ9k5d7&redirect_uri=https%3A%2F%2Fspa4h429l.otpyrc.dev%2Fauthorization-code%2Fcallback&scope=openid%20openid%20profile&state=UUsIclqQu6xw8uza%2F4rfDAfQ' = <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>.current_url | Pass
+
+asserting that <Function test_validate_otp_page_suite> | at Line 127 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_INPUT_ENTER_CODE_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.26")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.26")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>>('xpath', "//input[contains(@type, 'text') and contains(@name, 'credentials.passcode') and contains(@autocomplete, 'off')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+asserting that <Function test_validate_otp_page_suite> | at Line 133 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_HEADER_VERIFY_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.36")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.36")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>>('xpath', "//h2[contains(text(), 'Verify with Google Authenticator')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+asserting that <Function test_validate_otp_page_suite> | at Line 139 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_LABEL_ENTER_CODE_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.37")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.37")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>>('xpath', "//label[contains(text(), 'Enter code')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+asserting that <Function test_validate_otp_page_suite> | at Line 144 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_INPUT_ENTER_CODE_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.26")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.26")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>>('xpath', "//input[contains(@type, 'text') and contains(@name, 'credentials.passcode') and contains(@autocomplete, 'off')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+asserting that <Function test_validate_otp_page_suite> | at Line 149 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_BUTTON_VERIFY_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.38")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.38")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>>('xpath', "//input[contains(@type, 'submit') and contains(@value, 'Verify') and contains(@data-type, 'save')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+asserting that <Function test_validate_otp_page_suite> | at Line 155 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_SPAN_USERNAME_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.40")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.40")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>>('xpath', "//span[contains(text(), 'sengloong82@gmail.com')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+asserting that <Function test_validate_otp_page_suite> | at Line 161 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_LINK_BACK_TO_SIGN_IN_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.41")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="ce0d0b57faeb0cd33d1ad0c729304e1a", element="f.73EDDCFD99F81A646DFFAEF8FE0ECB09.d.823E1FAD02020B982F2072FEFA6C2FB2.e.41")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>>('xpath', "//a[contains(text(), 'Back to sign in')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="ce0d0b57faeb0cd33d1ad0c729304e1a")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+
+end testing test_validate_login_page_suite
+PASSED [ 75%]
+tests/pytest-selenium/test_otp_page.py::test_otp_page_verify_with_correct_code[875554] start testing test_otp_page_verify_with_correct_code
+
+asserting that <Function test_otp_page_verify_with_correct_code[875554]> | at Line 300 | '/profile' in web_driver.current_url | '/profile' in 'https://spa4h429l.otpyrc.dev/profile'
+ +  where 'https://spa4h429l.otpyrc.dev/profile' = <selenium.webdriver.chrome.webdriver.WebDriver (session="f7b30ce25155703aa54bd341f6a64c6f")>.current_url | Pass
+
+asserting that <Function test_otp_page_verify_with_correct_code[875554]> | at Line 302 | 'My Profile' in web_driver.find_element(By.XPATH, XPATH_MY_PROFILE_PAGE_HEADER_ELEMENT).text | 'My Profile' in 'My Profile'
+ +  where 'My Profile' = <selenium.webdriver.remote.webelement.WebElement (session="f7b30ce25155703aa54bd341f6a64c6f", element="f.24D0AD0C992E90433E642DB3F0963EA8.d.67907C92264ABF0069C87BD1E9DAB63D.e.10")>.text
+ +    where <selenium.webdriver.remote.webelement.WebElement (session="f7b30ce25155703aa54bd341f6a64c6f", element="f.24D0AD0C992E90433E642DB3F0963EA8.d.67907C92264ABF0069C87BD1E9DAB63D.e.10")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="f7b30ce25155703aa54bd341f6a64c6f")>>('xpath', "//h2[contains(text(), 'My Profile')]")
+ +      where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="f7b30ce25155703aa54bd341f6a64c6f")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="f7b30ce25155703aa54bd341f6a64c6f")>.find_element
+ +      and   'xpath' = By.XPATH | Pass
+
+asserting that <Function test_otp_page_verify_with_correct_code[875554]> | at Line 304 | USERNAME in data | 'sengloong82@gmail.com' in ['id', '00ugstdmtwCYvDRnS5d7', 'displayName', 'seng chan', 'username', 'sengloong82@gmail.com'] | Pass
+
+
+end testing test_otp_page_verify_with_correct_code
+PASSED [ 83%]
+tests/pytest-selenium/test_otp_page.py::test_otp_page_verify_with_empty_code[] start testing test_otp_page_verify_with_empty_code
+
+asserting that <Function test_otp_page_verify_with_empty_code[]> | at Line 317 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_P_ALERT_EMPTY_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="db3205f4f36f95c8d69701ff339847fc", element="f.03FB5EB84FD0E23690C2ABE7DC3EE40F.d.5E11C3027C0A05FE339DBE0488082277.e.41")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="db3205f4f36f95c8d69701ff339847fc", element="f.03FB5EB84FD0E23690C2ABE7DC3EE40F.d.5E11C3027C0A05FE339DBE0488082277.e.41")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="db3205f4f36f95c8d69701ff339847fc")>>('xpath', "//p[contains(text(), 'This field cannot be left blank')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="db3205f4f36f95c8d69701ff339847fc")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="db3205f4f36f95c8d69701ff339847fc")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+asserting that <Function test_otp_page_verify_with_empty_code[]> | at Line 319 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_P_ALERT_FORM_ERROR_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="db3205f4f36f95c8d69701ff339847fc", element="f.03FB5EB84FD0E23690C2ABE7DC3EE40F.d.5E11C3027C0A05FE339DBE0488082277.e.42")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="db3205f4f36f95c8d69701ff339847fc", element="f.03FB5EB84FD0E23690C2ABE7DC3EE40F.d.5E11C3027C0A05FE339DBE0488082277.e.42")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="db3205f4f36f95c8d69701ff339847fc")>>('xpath', "//p[contains(text(), 'We found some errors. Please review the form and make corrections.')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="db3205f4f36f95c8d69701ff339847fc")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="db3205f4f36f95c8d69701ff339847fc")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+
+end testing test_otp_page_verify_with_empty_code
+PASSED [ 91%]
+tests/pytest-selenium/test_otp_page.py::test_otp_page_verify_with_wrong_code[123456] start testing test_otp_page_verify_with_wrong_code
+
+asserting that <Function test_otp_page_verify_with_wrong_code[123456]> | at Line 332 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_P_ALERT_CODE_ERROR_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="c6d05eea3f5da6ccee8717a6892d3cf2", element="f.346C002366D0B0324C3A6DD988899A38.d.12871414191ED0814590B8FB2BEC2D49.e.42")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="c6d05eea3f5da6ccee8717a6892d3cf2", element="f.346C002366D0B0324C3A6DD988899A38.d.12871414191ED0814590B8FB2BEC2D49.e.42")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="c6d05eea3f5da6ccee8717a6892d3cf2")>>('xpath', '//p[contains(text(), "Your code doesn\'t match our records. Please try again.")]')
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="c6d05eea3f5da6ccee8717a6892d3cf2")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="c6d05eea3f5da6ccee8717a6892d3cf2")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+asserting that <Function test_otp_page_verify_with_wrong_code[123456]> | at Line 334 | web_driver.find_element(By.XPATH, XPATH_OTP_PAGE_P_ALERT_FORM_ERROR_ELEMENT) | <selenium.webdriver.remote.webelement.WebElement (session="c6d05eea3f5da6ccee8717a6892d3cf2", element="f.346C002366D0B0324C3A6DD988899A38.d.12871414191ED0814590B8FB2BEC2D49.e.43")>
+ +  where <selenium.webdriver.remote.webelement.WebElement (session="c6d05eea3f5da6ccee8717a6892d3cf2", element="f.346C002366D0B0324C3A6DD988899A38.d.12871414191ED0814590B8FB2BEC2D49.e.43")> = <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="c6d05eea3f5da6ccee8717a6892d3cf2")>>('xpath', "//p[contains(text(), 'We found some errors. Please review the form and make corrections.')]")
+ +    where <bound method WebDriver.find_element of <selenium.webdriver.chrome.webdriver.WebDriver (session="c6d05eea3f5da6ccee8717a6892d3cf2")>> = <selenium.webdriver.chrome.webdriver.WebDriver (session="c6d05eea3f5da6ccee8717a6892d3cf2")>.find_element
+ +    and   'xpath' = By.XPATH | Pass
+
+
+end testing test_otp_page_verify_with_empty_code
+PASSED [100%]
+============================ Hypothesis Statistics =============================
+
+- Generated html report: file:///home/dragon/pythondev/PythonQAAutomation/reports/report.html -
+======================== 12 passed in 207.09s (0:03:27) ========================
+Report successfully generated to allure-report
