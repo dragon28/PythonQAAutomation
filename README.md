@@ -67,6 +67,7 @@ For running specific test function inside the program file:
 `pytest --driver Chrome tests/pytest-selenium/test_otp_page.py::test_otp_page_verify_with_correct_code`
 
 
-**Note: You may the test report inside the `reports` or `allure-report` directory or test logs inside the `logs` directory
+
+**Note: You may find the test report inside the `reports` or `allure-report` directory or test log inside the `logs` directory
 
 
