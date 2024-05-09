@@ -70,4 +70,10 @@ For executing specific test function inside the program file:
 
 **Note: You may find the test report inside the `reports` or `allure-report` directory or test log inside the `logs` directory
 
+###### How to Generate Allure Report:
+
+If you are using `pytest` command to execute the test, then you may want to use `allure generate --single-file allure-results --clean` commands to generate the Allure report.
+
+Once the report was generated, it will be store in the `allure-report` directory
+
 
