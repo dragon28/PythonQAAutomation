@@ -6,8 +6,8 @@ if __name__ == '__main__':
     
     date_time = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
     
-    output_log_file = "logs/output_log_" + date_time +".log"
-    error_log_file = "logs/error_log_" + date_time +".log"
+    output_log_file = "logs/pytest_selenium_output_log_" + date_time +".log"
+    error_log_file = "logs/pytest_selenium_error_log_" + date_time +".log"
     
     single_html_report = "reports/report.html"
     allure_single_html_report  = "allure-report/index.html"
@@ -22,7 +22,7 @@ if __name__ == '__main__':
         pytest_output_log = open(output_log_file, 'w')
         pytest_output_log.write(pytest_result.stdout)
         pytest_output_log.close()
-        shutil.copyfile(single_html_report, "reports/report_" + date_time + ".html")
+        shutil.copyfile(single_html_report, "reports/pytest_selenium_report_" + date_time + ".html")
     
     
     if pytest_result.stderr:
@@ -44,7 +44,7 @@ if __name__ == '__main__':
         allure_output_log = open(output_log_file, 'a')
         allure_output_log.write(allure_result.stdout)
         allure_output_log.close()
-        shutil.copyfile(allure_single_html_report, "reports/allure_report_" + date_time + ".html")
+        shutil.copyfile(allure_single_html_report, "reports/pytest_selenium_allure_report_" + date_time + ".html")
     
     
     if allure_result.stderr:
